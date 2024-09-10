@@ -1,0 +1,23 @@
+// 账期日期控件混合
+@mixin accountPeriod {
+  :deep(.el-date-editor) {
+    --el-date-editor-width: 115px;
+    --el-input-transparent-border: unset;
+    --el-input-text-color: #000;
+    --el-input-bg-color: transparent;
+    --el-input-border-color: transparent;
+    --el-input-focus-border-color: transparent;
+    // --el-input-hover-border-color: transparent;
+    .el-input__wrapper {
+      padding: 0 0.57vw 0 0.3vw;
+      .el-input__prefix {
+        display: none;
+      }
+      .el-input__inner {
+        font-size: 26px;
+        font-weight: bold;
+        transform: translateY(1px);
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "custPhoneBookPc",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite  --mode development",
+    "test": "vite --mode test",
+    "prod": "vite --mode production",
+    "build": "vite build --mode development",
+    "build:test": "vite build --mode test",
+    "build:prod": "vite build --mode production",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "nprogress": "^0.2.0",
+    "axios": "^1.7.2",
+    "crypto-js": "^4.2.0",
+    "element-plus": "^2.7.4",
+    "moment": "^2.30.1",
+    "pinia": "^2.1.7",
+    "vue": "^3.4.21",
+    "echarts": "^5.4.3",
+    "vue-router": "^4.3.0",
+    "jsencrypt": "^3.3.2",
+    "@element-plus/icons-vue": "^2.3.1",
+    "unplugin-vue-components": "^0.27.0",
+    "postcss-px-to-viewport-update": "^1.2.0"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.8.0",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.23.0",
+    "prettier": "^3.2.5",
+    "rollup-plugin-terser": "^7.0.2",
+    "unplugin-auto-import": "^0.17.6",
+    "unplugin-vue-setup-extend-plus": "^1.0.1",
+    "vite": "^5.2.8",
+    "sass": "^1.70.0",
+    "vite-plugin-svg-icons": "^2.0.1"
+  }
+}
