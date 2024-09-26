@@ -11,7 +11,7 @@ export default defineConfig(({ command, mode }) => {
   console.log(env)
 
   return {
-    base: './',
+    base: '/',
     server: {
       port: 2024,
       host: '0.0.0.0',
