@@ -26,11 +26,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install # 使用 pnpm 安装依赖
 
-      - name: Build VitePress
-        run: pnpm run build:prod # 这里是打包 vitepress 命令
+      - name: Build Project
+        run: pnpm run build:prod
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.VUE3PROMOTE}} # 这一步很重要，单独看下面的大步骤，主要是用来给该脚本一些仓库权限
           publish_dir: ./dist
