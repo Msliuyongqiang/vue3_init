@@ -5,11 +5,11 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/chart'
+      redirect: '/chat'
     },
     {
-      path: '/chart',
-      name: 'chart',
+      path: '/chat',
+      name: 'chat',
       component: () => import('@/views/chart/index.vue')
     }
   ]
