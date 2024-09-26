@@ -54,8 +54,8 @@ const messages = ref(chatData)
 
 // 定义响应式变量
 const newReply = ref('')
-const replyTarget = ref({ message: null, to: null }) // 被回复的消息和被回复者
-const isReplyBoxVisible = ref(false) // 回复输入框的显示状态
+const replyTarget = ref({ message: null, to: null })
+const isReplyBoxVisible = ref(false)
 
 const placeholderTip = computed(() => {
   return replyTarget.value.to ? `回复 @${replyTarget.value.to}:` : `回复 ${replyTarget.value.message.author}:`
@@ -69,12 +69,10 @@ const toggleReplies = (message) => {
 // 点击“回复”按钮
 const replyToMessage = (message, to = null) => {
   if (replyTarget.value.message === message && isReplyBoxVisible.value && replyTarget.value.to === to) {
-    // 如果再次点击同一个，切换输入框显示状态
     isReplyBoxVisible.value = false
     replyTarget.value = { message: null, to: null }
     newReply.value = ''
   } else {
-    // 切换到新的回复目标
     replyTarget.value = { message, to }
     isReplyBoxVisible.value = true
     newReply.value = ''
@@ -92,15 +90,12 @@ const sendReply = () => {
       time: moment().format('YYYY-MM-DD HH:mm:ss')
     }
 
-    // 将新回复添加到消息的回复列表中
     replyTarget.value.message.replies.unshift(newReplyObj)
 
-    // 确保回复列表展开
     if (!replyTarget.value.message.isExpanded) {
       replyTarget.value.message.isExpanded = true
     }
 
-    // 清空输入框并重置回复目标
     newReply.value = ''
     replyTarget.value = { message: null, to: null }
     isReplyBoxVisible.value = false
